@@ -20,16 +20,16 @@ void stampa_lista(lista* p){
  
 }
 
-void crea_lista_input(lista * p){
+void crea_lista_input(lista ** p){
  
   int val;
   cin >> val;
 
-  if(val == 0) p == NULL;
+  if(val == 0) *p == NULL;
   else{
-    p = new lista;
-    (*p).x = val;
-    crea_lista_input( (*p).next );
+    *p = new lista;
+    (*p)->x = val;
+    crea_lista_input(&( (*p)->next) );
   }
 }
 
@@ -40,7 +40,7 @@ int main(){
   //la nostra lista  
 
   cout << "inserire i valori per la lista (0 per concludere)." << endl;
-  crea_lista_input(p);
+  crea_lista_input(&p);
 
   cout << "Lista:" << endl;
   stampa_lista(p);
