@@ -16,10 +16,10 @@ void stampa_lista(lista* p){
     //stampa il valore del nodo
     stampa_lista((*p).next);
     //stampa il resto della lista con una chiamata ricorsiva
-  } 
+  }
 }
 
-lista* crea_lista_input(lista * p){ 
+lista* crea_lista_input(lista * p){
   int val;
   cin >> val;
 
@@ -36,8 +36,8 @@ lista * rimuovi_n_lista(lista* p, int n){
   lista * head = p;
   //Segna l'inizio della lista
   if(p == NULL) return NULL;
-  
-  else{ 
+
+  else{
     if( ((*p).x % n) == 0){
       lista * tmp;
       tmp = p;
@@ -45,20 +45,20 @@ lista * rimuovi_n_lista(lista* p, int n){
       delete tmp;
       return rimuovi_n_lista(p,n);
     }//Elimina il nodo della lista se il val e' multiplo di n
- 
+
     else{
       (*p).next = rimuovi_n_lista((*p).next, n);
       return head;
-    }//Se il val va bene il nodo non viene toccato 
+    }//Se il val va bene il nodo non viene toccato
      //e next e' uguale al resto della lista senza i nodi non vouti
-  }    
+  }
 }
 
 int main(){
   int  n;
 
   lista* p;
-  //la nostra lista  
+  //la nostra lista
 
   cout << "inserire i valori per la lista (0 per concludere)." << endl;
   p = crea_lista_input(p);
