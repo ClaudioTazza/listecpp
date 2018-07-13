@@ -2,7 +2,6 @@
 
 nodo::nodo(int n){
   setNum(n);
-  setNext(NULL);
 }//Costruttore del nodo
 
 void nodo::setNum(int n){
