@@ -2,20 +2,15 @@
 using std::cout;
 using std::endl;
 
-#include "nodo.h"
+#include "lista.h"
 
 int main() {
-  nodo prova(5);			//Crea il nodo prova inserendovi 5
-  nodo prossimo(2);			//Crea un secondo nodo con invece 2
+  lista prova;
+  nodo provaN(5);
 
-  prova.setNext(&prossimo);		//Inserisce nel valore next di prova
-					//l'indizzo del noto 'prossimo'
+  prova.setPrimoNodo(&provaN);
 
-  cout << (*prova.getNext()).getNum() << endl;
-  //Stampa il num presente nel nodo il quale indirizzo si trova nella variabile
-  // 'next' di prova (Sembra complicato ma capito questo il resto dovrebbe essere
-  // un po' piu' banale)
-
+  prova.stampa();
 
   return 0;
 }

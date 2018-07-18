@@ -1,21 +1,19 @@
 #include "lista.h"
-#include "nodo.h"
+#include <cstddef>
 
 lista::lista(){
-  head = new nodo;
+ head = NULL;
 }
 
-void append(int num){
-  nodo* p = getLastNode(head);
-  p.next = new nodo;
-  (* p.next).num = num;
-
+void lista::setPrimoNodo(nodo* primo){
+  head = primo;
 }
 
-nodo* getLastNode(nodo* head){
- if(head.next == NULL)
-    return head;
+void lista::stampa(){
+  if(head == NULL);
 
- else
-   return getLastNode(head.next);
+  else{
+    cout << *head.getNum() << endl;
+  }
 }
+
