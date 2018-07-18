@@ -1,4 +1,4 @@
-#include "nodo.h"
+#include "../Nodo/nodo.h"
 
 class lista{
 private:
@@ -8,4 +8,6 @@ public:
   lista();
   void setPrimoNodo(nodo*);
   void stampa();
+  void setHead(nodo*);
+  void append(int);
 };

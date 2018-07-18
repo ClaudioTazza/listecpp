@@ -2,13 +2,12 @@
 using std::cout;
 using std::endl;
 
-#include "lista.h"
+#include "Lista/lista.h"
 
 int main() {
   lista prova;
-  nodo provaN(5);
 
-  prova.setPrimoNodo(&provaN);
+  prova.append(20);
 
   prova.stampa();
 

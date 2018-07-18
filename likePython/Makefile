@@ -4,9 +4,9 @@ CXXFLAGS=-Wall -ansi -pedantic
 main: main.o lista.o nodo.o
 	$(CXX) $^ -o $@
 
-lista.o: lista.cpp lista.h nodo.h
-nodo.o: nodo.cpp nodo.h
-main.o: main.cpp nodo.h
+lista.o: Lista/lista.cpp Lista/lista.h Nodo/nodo.h
+nodo.o: Nodo/nodo.cpp Nodo/nodo.h
+main.o: main.cpp
 
 .PHONY: clean
 clean:
