@@ -1,5 +1,6 @@
 #include "lista.h"
 #include <cstddef>
+#include <iostream>
 
 lista::lista(){
  head = NULL;
@@ -13,7 +14,7 @@ void lista::stampa(){
   if(head == NULL);
 
   else{
-    cout << *head.getNum() << endl;
+    std::cout << (*head).getNum();
   }
 }
 

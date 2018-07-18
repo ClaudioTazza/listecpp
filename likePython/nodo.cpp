@@ -20,9 +20,3 @@ nodo* nodo::getNext(){
   return next;
 }//Ritorna il nodo successivo
 
-nodo* nodo::getLastNodo(){
-  if(this->getNext() == NULL)
-    return &nodo;
-
-  else this.next->getLastNodo();
-}
