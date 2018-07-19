@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 #include "nodo.hpp"
 #include <cstddef>
 
@@ -28,21 +29,21 @@ nodo* nodo::getNext(){
 void nodo::append(int Num){
   if(this->getNext() == NULL){
     this->setNext(new nodo(Num));
-  }
+  }//Se il nodo e' l'ultimo ne attacca uno nuovo con Num
 
   else{
     (*this->getNext()).append(Num);
-  }
+  }//Altrimenti passa al prossimo
 
 }
 
 void nodo::stampa(){
   if(this->getNext() == NULL){
     cout << this->getNum() << endl;
-  }
+  }//Se il nodo e' l'ultimo nodo, lo stampa e si ferma
 
   else{
-    cout << this->getNum() << endl;
-    (*this->getNext()).stampa();
+    cout << this->getNum() << endl;	//Stampa il nodo attuale
+    (*this->getNext()).stampa();	//Stampa il prossimo nodo e i restanti
   }
 }
