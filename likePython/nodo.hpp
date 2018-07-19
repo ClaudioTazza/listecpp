@@ -1,3 +1,6 @@
+#ifndef NODO_HPP
+#define NODO_HPP
+
 class nodo{
 private:
   int num;
@@ -10,4 +13,8 @@ public:
   void setNext(nodo*);
   int getNum();
   nodo* getNext();
+  void append(int);
+  void stampa();
 };
+
+#endif

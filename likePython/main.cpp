@@ -2,14 +2,20 @@
 using std::cout;
 using std::endl;
 
-#include "Lista/lista.h"
+#include <stdlib.h>
+#include <time.h>
+#include "nodo.hpp"
 
 int main() {
-  lista prova;
+  srand(time(NULL));
 
-  prova.append(20);
+  nodo* lista = new nodo(30);
 
-  prova.stampa();
+  for(int i = 0; i < 10; i++)
+    (*lista).append(rand() % 10);
+
+
+  (*lista).stampa();
 
   return 0;
 }
