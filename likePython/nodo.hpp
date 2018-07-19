@@ -11,8 +11,10 @@ public:
 
   void setNum(int);
   void setNext(nodo*);
+
   int getNum();
   nodo* getNext();
+
   void append(int);
   void stampa();
 };
