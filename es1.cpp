@@ -78,6 +78,8 @@ int close_by_media(lista* p, int media){
 
 int main(){
   int long_list, media, elem_media, somma_elem_lista;
+
+  cout << "istruzione inutile, forse dannosa" << endl;
   
   srand( time(NULL) );
   //inizializza rand per la funzione crea_lista_random()
